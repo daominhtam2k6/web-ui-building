@@ -1,0 +1,336 @@
+﻿/* ==========================================================
+   RESET
+========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================================================
+   BODY
+========================================================== */
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f8fafc;
+
+    color: #1e293b;
+}
+
+/* ==========================================================
+   PAGE
+========================================================== */
+
+.page {
+    min-height: 100vh;
+
+    padding:
+        60px
+        20px;
+}
+
+/* ==========================================================
+   SECTION
+========================================================== */
+
+.products-section {
+    width: min(1200px, 100%);
+
+    margin: 0 auto;
+}
+
+.section-heading {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin:
+        0 auto
+        40px;
+}
+
+.eyebrow {
+    color: #2563eb;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.section-heading h1 {
+    font-size: 38px;
+
+    margin-bottom: 12px;
+}
+
+.description {
+    color: #64748b;
+
+    font-size: 17px;
+}
+
+/* ==========================================================
+   PRODUCT GRID
+========================================================== */
+
+.product-grid {
+
+    /* Kich hoat Flexbox */
+    display: flex;
+
+    /* Cho phep card xuong dong */
+    flex-wrap: wrap;
+
+    /* Khoang cach giua cac card */
+    gap: 20px;
+
+    padding: 20px 0;
+}
+
+/* ==========================================================
+   PRODUCT CARD
+========================================================== */
+
+.product-card {
+
+    /*
+       flex-grow: 1
+       flex-shrink: 1
+       flex-basis: khoang 25%
+    */
+
+    flex:
+        1
+        1
+        calc(25% - 20px);
+
+    min-width: 220px;
+
+    background: #ffffff;
+
+    border:
+        1px solid
+        #e2e8f0;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.05);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 12px 25px
+        rgba(15, 23, 42, 0.10);
+}
+
+/* ==========================================================
+   PRODUCT IMAGE
+========================================================== */
+
+.product-image {
+    height: 180px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: white;
+
+    font-size: 26px;
+
+    font-weight: bold;
+}
+
+.product-one {
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #60a5fa
+        );
+}
+
+.product-two {
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #a78bfa
+        );
+}
+
+.product-three {
+    background:
+        linear-gradient(
+            135deg,
+            #ea580c,
+            #fb923c
+        );
+}
+
+.product-four {
+    background:
+        linear-gradient(
+            135deg,
+            #059669,
+            #34d399
+        );
+}
+
+/* ==========================================================
+   PRODUCT CONTENT
+========================================================== */
+
+.product-content {
+    padding: 20px;
+}
+
+.category {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: #2563eb;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+}
+
+.product-card h4 {
+    font-size: 21px;
+
+    margin-bottom: 10px;
+}
+
+.product-description {
+    min-height: 48px;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 18px;
+}
+
+/* ==========================================================
+   PRICE
+========================================================== */
+
+.price {
+    color: #0f172a;
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    margin-bottom: 18px;
+}
+
+/* ==========================================================
+   BUTTON
+========================================================== */
+
+.product-button {
+    width: 100%;
+
+    padding: 11px 16px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #0f172a;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease;
+}
+
+.product-button:hover {
+    background: #2563eb;
+}
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .product-card {
+
+        /*
+           Tren man hinh vua:
+           moi card co xu huong chiem 50%
+        */
+
+        flex-basis:
+            calc(50% - 20px);
+    }
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 520px) {
+
+    .page {
+        padding:
+            40px
+            16px;
+    }
+
+    .section-heading h1 {
+        font-size: 30px;
+    }
+
+    .product-grid {
+        gap: 16px;
+    }
+
+    .product-card {
+
+        /*
+           Tren mobile card chiem toan bo dong
+        */
+
+        flex-basis: 100%;
+
+        min-width: 100%;
+    }
+
+}
